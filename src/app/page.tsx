@@ -22,19 +22,17 @@ import { useAtom } from "jotai";
 import { loadingCityAtom, placeAtom } from "./atom";
 export default function Home() {
   const [place, setPlace] = useAtom(placeAtom);
-  const [loadingCity,setLoadingCity] = useAtom(loadingCityAtom);
+  const [loadingCity, setLoadingCity] = useAtom(loadingCityAtom);
   console.log("🚀 ~ file: page.tsx:25 ~ Home ~ place:", place);
- 
 
   const { isLoading, error, data, refetch, status } = useQuery<Weather>(
     "weatherData",
-    async () =>
-      queryWeatherCurrentLoc(place)
+    async () => queryWeatherCurrentLoc(place)
   );
 
-  useEffect(() =>{
-    refetch()
-  },[place,refetch])
+  useEffect(() => {
+    refetch();
+  }, [place, refetch]);
 
   console.log("🚀 ~ file: page.tsx:35 ~ Home ~ status:", status);
   const currData = data?.list[0];
@@ -63,7 +61,7 @@ export default function Home() {
     firstDataForEachDate
   );
 
-  console.log("place",place);
+  console.log("place", place);
   console.log("data", data?.list.length);
 
   return (
@@ -80,12 +78,18 @@ export default function Home() {
                 <p>
                   {format(
                     new Date(currData?.dt_txt ?? new Date()).getTime() +
-                      (data?.city.timezone ?? 0),
+                      ((data?.city.timezone ?? 25200) - 3600) * 1000,
                     "EEEE"
                   )}
                 </p>
                 <p className="text-lg">
-                  ({format(currData?.dt_txt ?? new Date(), "dd.MM.yyyy")})
+                  (
+                  {format(
+                    new Date(currData?.dt_txt ?? new Date()).getTime() +
+                      ((data?.city.timezone ?? 25200) - 3600) * 1000,
+                    "dd.MM.yyyy"
+                  )}
+                  )
                 </p>
               </h2>
               <Container className="gap-10 px-6 items-center ">
@@ -115,7 +119,7 @@ export default function Home() {
                       </p>
                       <WeatherIcon
                         iconname={dayNightIcon(
-                          data.weather[0].icon??"01d",
+                          data.weather[0].icon ?? "01d",
                           timezoned(data.dt_txt)
                         )}
                       />
