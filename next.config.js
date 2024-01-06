@@ -27,6 +27,11 @@ const nextConfig = {
 
     return config;
   },
+  compiler: {
+    removeConsole: {
+      exclude: ["error"],
+    },
+  },
   images: {
     remotePatterns: [
       {
