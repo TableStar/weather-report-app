@@ -1,0 +1,98 @@
+{
+  "cod": "200",
+  "message": 0,
+  "cnt": 2,
+  "list": [
+    {
+      "dt": 1704380400,
+      "main": {
+        "temp": 296.32,
+        "feels_like": 297.17,
+        "temp_min": 296.32,
+        "temp_max": 296.32,
+        "pressure": 1013,
+        "sea_level": 1013,
+        "grnd_level": 962,
+        "humidity": 95,
+        "temp_kf": 0
+      },
+      "weather": [
+        {
+          "id": 501,
+          "main": "Rain",
+          "description": "moderate rain",
+          "icon": "10n"
+        }
+      ],
+      "clouds": {
+        "all": 100
+      },
+      "wind": {
+        "speed": 0.24,
+        "deg": 56,
+        "gust": 0.38
+      },
+      "visibility": 10000,
+      "pop": 0.79,
+      "rain": {
+        "3h": 3.83
+      },
+      "sys": {
+        "pod": "n"
+      },
+      "dt_txt": "2024-01-04 15:00:00"
+    },
+    {
+      "dt": 1704391200,
+      "main": {
+        "temp": 296.13,
+        "feels_like": 296.96,
+        "temp_min": 295.75,
+        "temp_max": 296.13,
+        "pressure": 1012,
+        "sea_level": 1012,
+        "grnd_level": 960,
+        "humidity": 95,
+        "temp_kf": 0.38
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "light rain",
+          "icon": "10n"
+        }
+      ],
+      "clouds": {
+        "all": 99
+      },
+      "wind": {
+        "speed": 0.34,
+        "deg": 54,
+        "gust": 0.57
+      },
+      "visibility": 10000,
+      "pop": 0.79,
+      "rain": {
+        "3h": 0.15
+      },
+      "sys": {
+        "pod": "n"
+      },
+      "dt_txt": "2024-01-04 18:00:00"
+    }
+  ],
+  "city": {
+    "id": 1636722,
+    "name": "Malang",
+    "coord": {
+      "lat": -7.9797,
+      "lon": 112.6304
+    },
+    "country": "ID",
+    "population": 746716,
+    "timezone": 25200,
+    "sunrise": 1704320198,
+    "sunset": 1704365458
+  }
+}
