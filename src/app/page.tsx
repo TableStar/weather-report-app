@@ -92,7 +92,7 @@ export default function Home() {
                   )
                 </p>
               </h2>
-              <Container className="gap-10 px-6 items-center ">
+              <Container className="gap-10 flex-col sm:flex-row px-6 items-center ">
                 {/* temperature */}
                 <div className="flex flex-col px-4">
                   <span className="text-5xl">
